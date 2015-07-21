@@ -19,7 +19,8 @@ core = new Cow.core({
     herdname: config.herdname,
     maxage: 1000 * 60 * 60 * 24 * 365 //one year 
 });
-core.socketservers({
+if (!core.socketservers('default')){
+   core.socketservers({
         _id: 'default', 
         data: {
         	protocol: config.protocol,
@@ -27,6 +28,7 @@ core.socketservers({
         	port: config.port,
         	dir: config.dir}
       });
+});
 core.socketserver('default');
 core.connect();
 core.userStore().loaded.then(function(){
