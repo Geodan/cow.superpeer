@@ -1,0 +1,8 @@
+{
+	"dbUrl": "tcp://<user>:<pass>@<ip address>/<dbase>",
+	"herdname":"<herdname>",
+	"protocol": "<ws or wss>",
+	"ip": "<socket ip>",
+	"port": <socket port nr>,
+	"dir": "<socket dir>"
+}

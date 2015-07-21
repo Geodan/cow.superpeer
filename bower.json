@@ -1,0 +1,25 @@
+{
+  "name": "cow.superpeer",
+  "version": "0.0.1",
+  "homepage": "https://github.com/tomvantilburg/cow.superpeer",
+  "description": "Superpeer instance that connects cow to a postgres server",
+  "keywords": [
+    "nodejs",
+    "postgres",
+    "cow"
+  ],
+  "authors": [
+    "Tom van Tilburg"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "cow": "~2.0.5"
+  }
+}
