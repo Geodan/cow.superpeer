@@ -2,9 +2,9 @@ configfile = process.argv[2];
 //Enable full path
 config = require(configfile);
 
-_ = require('../node_modules/underscore/underscore.js')._
-Promise = require('../node_modules/es6-promise').Promise;
-Events = require('../src/events.js');
+_ = require('./node_modules/underscore/underscore.js')._
+Promise = require('./node_modules/es6-promise').Promise;
+Events = require('./events.js');
 
 WebSocket = require('websocket').client;
 pg = require('pg').native;
@@ -12,7 +12,7 @@ pg = require('pg').native;
 GLOBAL.dbUrl = config.dbUrl;
 //Set env var to accept all certificates
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
-Cow = require('../../dist/cow.node.js');
+Cow = require('./bower_components/cow/dist/cow.node.js');
 
 
 core = new Cow.core({
@@ -28,7 +28,7 @@ if (!core.socketservers('default')){
         	port: config.port,
         	dir: config.dir}
       });
-});
+};
 core.socketserver('default');
 core.connect();
 core.userStore().loaded.then(function(){
