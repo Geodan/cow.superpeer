@@ -1,8 +1,8 @@
 {
   "name": "cow.superpeer",
-  "version": "0.0.1",
-  "homepage": "https://github.com/tomvantilburg/cow.superpeer",
-  "description": "Superpeer instance that connects cow to a postgres server",
+  "version": "1.0.0",
+  "homepage": "https://github.com/Geodan/cow.superpeer.git",
+  "description": "Cow Superpeer instance that connects cow to a postgres server",
   "keywords": [
     "nodejs",
     "postgres",
