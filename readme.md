@@ -35,7 +35,7 @@ In Debian bases desitros node is already reserved for something else than nodejs
 
 3. Clone cow software from GitHUb
 
-`cd /opt/cow && git clone https://github.com/Geodan/cow`
+`cd /opt/cow && git clone https://github.com/Geodan/cow.superpeer.git`
 	
 4. Extra node modules:
 
