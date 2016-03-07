@@ -1,14 +1,14 @@
 {
-  "name": "superpeer",
-  "version": "0.1.0",
-  "description": "Superpeer COW module",
+  "name": "cow.superpeer",
+  "version": "1.0.0",
+  "description": "Cow Superpeer instance that connects cow to a postgres server",
   "main": "superpeer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Geodan/cow.git"
+    "url": "https://github.com/Geodan/cow.superpeer.git"
   },
   "author": "COW Contributors",
   "license": "MIT",
@@ -21,6 +21,6 @@
     "forever": "~0.14.1"
   },
   "bugs": {
-    "url": "https://github.com/Geodan/cow/issues"
+    "url": "https://github.com/Geodan/cow.superpeer/issues"
   }
 }
