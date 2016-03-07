@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Geodan/cow.git"
+    "url": "https://github.com/Geodan/cow.superpeer.git"
   },
   "author": "COW Contributors",
   "license": "MIT",
@@ -21,6 +21,6 @@
     "forever": "~0.14.1"
   },
   "bugs": {
-    "url": "https://github.com/Geodan/cow/issues"
+    "url": "https://github.com/Geodan/cow.superpeer/issues"
   }
 }
