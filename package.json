@@ -13,11 +13,12 @@
   "author": "COW Contributors",
   "license": "MIT",
   "dependencies": {
-    "pg": "~4.3.0",
-    "pg-native": "~1.8.0",
-    "websocket": "~1.0.18",
-    "underscore": "~1.8.3",
-    "es6-promise": "~2.0.1"
+    "es6-promise": "~2.0",
+    "pg": "~4.3",
+    "pg-native": "~1.8",
+    "underscore": "~1.8",
+    "websocket": "~1.0",
+    "winston": "^2.3.0"
   },
   "bugs": {
     "url": "https://github.com/Geodan/cow.superpeer/issues"
