@@ -33,6 +33,7 @@ core = new Cow.core({
     herdname: config.herdname,
     maxage: 1000 * 60 * 60 * 24 * 365 //one year 
 });
+
 if (!core.socketservers('default')){
    core.socketservers({
         _id: 'default', 
@@ -44,13 +45,43 @@ if (!core.socketservers('default')){
       });
 };
 core.socketserver('default');
-core.connect();
-core.userStore().loaded.then(function(){
+core.websocket().on('notice',function(m){
+	logger.info(m);
+});
+core.websocket().on('error',function(m){
+	logger.info(m);
+});
+function start(){
+  core.userStore().loaded.then(function(){
 	logger.info(core.users().length, ' users loaded');
-});
+  });
+  core.userStore().localdb._openpromise.then(d=>{
+  		logger.info('userstore db opened');
+  })
+  .catch(e=>{
+  		logger.error('userstore db error' + e);
+  });
 
-core.projectStore().loaded.then(function(){
-	logger.info(core.projects().length, ' projects loaded');
-	core.peer().data('superpeer', true).sync();
-	logger.info('My peerid: ', core.peerid());
-});
+		core.projectStore().loaded.then(function(){
+			logger.info(core.projects().length, ' projects loaded');
+			core.peer().data('superpeer', true).sync();
+			logger.info('My peerid: ', core.peerid());
+		});	
+	
+	
+  core.connect()
+	.then(connection=>{
+		logger.info('connected');
+		connection.on('close',d=>{
+			//setTimeout(start,2000);
+			throw('Connection closed');
+		});
+		core.messenger().on('notice',d=>{
+			logger.info(d);
+		});
+		
+	})
+	.catch(d=>logger.warn('problem: '+d));
+};
+
+start();
