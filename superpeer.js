@@ -5,7 +5,7 @@ config = require(configfile);
 _ = require('./node_modules/underscore/underscore.js')._
 Promise = require('./node_modules/es6-promise').Promise;
 Events = require('./events.js');
-
+lzwCompress = require('lzwcompress');
 
 WebSocket = require('websocket').client;
 pg = require('pg').native;
