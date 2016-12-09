@@ -20,6 +20,6 @@
     "tests"
   ],
   "dependencies": {
-    "cow": "~2.2"
+    "cow": "~2.3"
   }
 }
